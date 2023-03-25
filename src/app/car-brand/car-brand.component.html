@@ -1,0 +1,20 @@
+<h2>Car Brands</h2>
+<div>
+  <ul>
+    <li *ngFor="let carBrand of (carBrands$ | async)" (click)="onSelect(carBrand)" [class.selected]="carBrand === selectedCarBrand">
+      {{carBrand.name}}
+    </li>
+  </ul>
+  <div *ngIf="selectedCarBrand">
+    <div>
+      <h3>{{isEditMode ? 'Edit' : 'Add'}} Brand:</h3>
+      <form (submit)="isEditMode ? update() : add(nameInput.value)">
+        <input #nameInput [(ngModel)]="selectedCarBrand.name" placeholder="Brand name" required>
+        <button type="submit">{{isEditMode ? 'Save' : 'Add'}}</button>
+        <button *ngIf="isEditMode" type="button" (click)="cancel()">Cancel</button>
+      </form>
+    </div>
+    <button (click)="delete(selectedCarBrand)">Delete</button>
+    <button (click)="edit(selectedCarBrand)">Edit</button>
+  </div>
+</div>

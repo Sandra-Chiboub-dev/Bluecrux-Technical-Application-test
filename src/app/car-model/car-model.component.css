@@ -1,0 +1,37 @@
+div {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input, textarea {
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button:first-of-type {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  button:nth-of-type(2) {
+    margin-left: 10px;
+  }
+  
+  button:last-of-type {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  

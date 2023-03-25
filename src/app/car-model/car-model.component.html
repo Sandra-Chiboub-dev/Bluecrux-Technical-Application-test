@@ -1,0 +1,22 @@
+<div *ngIf="carModel">
+  <h2>{{carModel.name}}</h2>
+  <div>
+    <label>Brand:</label>
+    <input [(ngModel)]="carModel.brand" placeholder="Brand"/>
+  </div>
+  <div>
+    <label>Name:</label>
+    <input [(ngModel)]="carModel.name" placeholder="Name"/>
+  </div>
+  <div>
+    <label>Year:</label>
+    <input [(ngModel)]="carModel.year" placeholder="Year"/>
+  </div>
+  <div>
+    <label>Description:</label>
+    <textarea [(ngModel)]="carModel.description" placeholder="Description"></textarea>
+  </div>
+  <button (click)="save()">Save</button>
+  <button (click)="goBack()">Back</button>
+  <button (click)="delete()">Delete</button>
+</div>
